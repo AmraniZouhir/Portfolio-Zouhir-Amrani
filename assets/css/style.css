@@ -30,15 +30,94 @@ a:hover{
     color: var(--color-brand);
 }
 
-img{
-    width: 100%";
+/* CSS for making the image responsive and setting the width and height */
+.responsive-image {
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  height: auto; /* Maintain the image's aspect ratio */
+  width: 180px; /* Set the desired width */
+  height: 180px; /* Set the desired height */
 }
+
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgb(255, 255,255,0.1);
+}
+
+.navbar{
+    background-color: var(--color-base);
+}
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+ul.navbar-nav.ms-auto.flex-lg-column.text-lg-center li:hover a {
+    /* Add your desired styles here */
+    color: var(--color-brand); /* Change this to your desired text color on hover */
+    /* You can add other styles as well, such as font-size or font-weight */
+  }
+
+.text-brand{
+    color: var(--color-brand);
+}
+
 @media(min-width : 992px){
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(3,63,71,0.9) , rgba(3, 63,71,0.9)), url(../images/sidebar-img.jpg);
+        background: linear-gradient(rgba(3,63,71,0.7) , rgba(3, 63,71,0.7)), url(../images/sidebar-img.jpg);
         background-size: cover;
         background-position: center;
     }
+    .navbar-brand img{
+        border: 5px solid var(--color-brand);
+    }
+
+    /* content-wrapper */
+   #content-wrapper{
+    padding-left: var(--sidbar-width);
+    /* background-color: red; */
+   }
+}
+
+/* BTN */
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-body);
+}
+
+.custom-link{
+    font-weight: 700;
+    position: relative;
+}
+
+.custom-link::after{
+    content: "";
+    width:0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+}
+.custom-link:hover::after{
+    width: 100%;
 }
