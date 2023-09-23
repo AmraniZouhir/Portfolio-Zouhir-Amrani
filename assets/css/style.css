@@ -38,6 +38,10 @@ a:hover{
   height: 180px; /* Set the desired height */
 }
 
+
+.bg-base{
+    background-color: var(--color-base);
+}
 .full-height{
     min-height: 100vh;
     height: 100%;
@@ -49,13 +53,43 @@ a:hover{
     border-bottom: 2px solid rgb(255, 255,255,0.1);
 }
 
+
+.shadow-effect {
+    transition: all 0.5s;
+    border: 2px  ; /* Replace with your desired border color */
+    border-radius: 4%;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand2); /* Replace with your desired color */
+}
+
+.iconbox{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    border: 2px solid ; /* Replace with your desired border color */
+    border-radius: 20%; /* This creates a circular border for the icon */
+
+
+}
+
 .navbar{
-    background-color: var(--color-base);
+    background-color: var(--color-brand);
 }
 .navbar .nav-link{
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+/* Define the active link color */
+.navbar .nav-link.active {
+    color: red; /* Change this to your desired active link color */
 }
 
 ul.navbar-nav.ms-auto.flex-lg-column.text-lg-center li:hover a {
