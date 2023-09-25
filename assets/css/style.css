@@ -80,16 +80,15 @@ a:hover{
 }
 
 .navbar{
-    background-color: var(--color-brand);
+    background-color: var(--color-base);
 }
 .navbar .nav-link{
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
 }
-/* Define the active link color */
-.navbar .nav-link.active {
-    color: red; /* Change this to your desired active link color */
+.navbar .nav-link:active{
+    color: red;
 }
 
 ul.navbar-nav.ms-auto.flex-lg-column.text-lg-center li:hover a {
@@ -155,3 +154,33 @@ ul.navbar-nav.ms-auto.flex-lg-column.text-lg-center li:hover a {
 .custom-link:hover::after{
     width: 100%;
 }
+
+
+
+/* CARD WORK */
+
+.img-responsive {
+    max-width: 160%; /* Ensures the image doesn't exceed its container */
+    height: fit-content;  
+    height:400px;
+    width: auto\90;   /* For IE 8 and below to support max-width */
+  }
+  .image-with-border-radius {
+    border-radius: 10px; 
+  }
+
+  .card-custom {
+    width: 480px; /* You can adjust the width to your preference */
+    background-color:var(--color-base); /* Set your desired background color here */
+  }
+  
+  .card-custom .card-custom-image{
+    overflow: hidden;
+  } 
+  .card-custom .card-custom-image img{
+    transition: all 0.4s ease ;
+  }
+
+  .card-custom:hover .card-custom-image img{
+    transform: scale(1.1);
+  }
