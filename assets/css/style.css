@@ -217,7 +217,8 @@ ul.navbar-nav.ms-auto.flex-lg-column.text-lg-center li:hover a {
       width: 0;
     }
     100% {
-      width: 98%;
+      width: 80%;
+      
     }
   }
 
@@ -373,4 +374,7 @@ ul.navbar-nav.ms-auto.flex-lg-column.text-lg-center li:hover a {
     background-color: var(--color-base);
     border-radius: 100px;
     font-size: 24px;
+}
+.progress p {
+  font-size: 16px; /* Adjust the font size as needed */
 }
